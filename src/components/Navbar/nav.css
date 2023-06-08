@@ -3,3 +3,37 @@
     flex-direction: column;
     
 }
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+.nature .realestate .urban{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  max-width: 25%;
+  height: auto;
+  max-height: 25%;
+  z-index: -1;
+}
+.nav-link{
+    z-index: 1;
+}
+.nav-item{
+    display: flex;
+}
+.active{
+    height: auto;
+}
+a {
+    display: flex;
+    justify-content: center;
+}
+a img{
+    width: min-content;
+  height: auto;
+}

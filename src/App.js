@@ -1,29 +1,43 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import './App.css';
-import Footer from "./components/Footer/Footer";
-import Nature from "./components/Nature/Nature";
-import Equipment from "./components/Equipment/Equipment";
-import RealEstate from "./components/RealEstate/RealEstate";
-import Urban from "./components/Urban/Urban";
-import Home from "./components/Home/Home";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from "./components/Navbar/Navbar";
-function App() {
+import React, { useRef } from 'react';
+import Navbar from './components/Navbar/Navbar';
+import Home from './components/Home/Home';
+import FadeInOnScroll from './components/Home/Fade-in';
+import Nature from './components/Nature/Nature';
+import RealEstate from './components/RealEstate/RealEstate';
+import Urban from './components/Urban/Urban';
+import Equipment from './components/Equipment/Equipment';
+import Footer from './components/Footer/Footer';
+
+const App = () => {
+  const sectionRefs = {
+    Home: useRef(null),
+    Nature: useRef(null),
+    RealEstate: useRef(null),
+    Urban: useRef(null),
+    Equipment: useRef(null),
+  };
+
+  const handleClick = (sectionId) => {
+    const sectionRef = sectionRefs[sectionId];
+    if (sectionRef && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="App">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" exact element={<Home/>} />
-          <Route path="/Urban" element={<Urban />} />
-          <Route path="/RealEstate" element={<RealEstate />} />
-          <Route path="/Nature" element={<Nature />} />
-          <Route path="/Equipment" element={<Equipment/>} />
-        </Routes>
+      <div className="wrapper">
+        <Navbar handleClick={handleClick} />
+        <Home ref={sectionRefs.Home} />
+        <FadeInOnScroll ref={sectionRefs.Nature} children={<Nature />} />
+        <FadeInOnScroll ref={sectionRefs.RealEstate} children={<RealEstate />} />
+        <FadeInOnScroll ref={sectionRefs.Urban} children={<Urban />} />
+        <FadeInOnScroll ref={sectionRefs.Equipment} children={<Equipment />} />
         <Footer />
-      </Router>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
+

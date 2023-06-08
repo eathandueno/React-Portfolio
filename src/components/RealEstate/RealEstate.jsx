@@ -2,7 +2,7 @@ import React from 'react'
 
 const RealEstate = () => {
   return (
-    <div>RealEstate</div>
+    <div id='RealEstate'>RealEstate</div>
   )
 }
 

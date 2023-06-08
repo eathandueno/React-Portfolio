@@ -1,0 +1,61 @@
+.about-me{
+    font-size: 150%;
+    width: max-content;
+    opacity: 70%;
+    height: max-content;
+    padding: 10px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 0.4em rgba(0, 0, 0, 0.646);
+}
+.home-container{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5%;
+    background-color: #ACAD94;
+    height: 100vh;
+    background-image: url('./nature-dom-1.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+    .timeline{
+    right: 10px;
+    position: static;
+    writing-mode: vertical-rl; /* Set the writing mode to vertical right-to-left */
+  text-orientation: upright;
+}
+.about-text{
+    font-family: 'Merriweather';
+}
+#scroll-progress {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 80%;
+    background-color: #ddd;
+    z-index: 9999;
+  }
+  
+  #scroll-progress-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  #scroll-progress-dot.active {
+    background-color: #f00;
+  }
+  

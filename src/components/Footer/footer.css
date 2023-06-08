@@ -1,19 +1,32 @@
 .footer{
-    position: absolute;
+    
     bottom: 0px;
-    height: 15vh;
+    left: 0;
+    height: max-content;
     width: 100%;
-    background-color: black;
+    background-color: #212529;
     color: white;
     display: flex;
     flex-direction: column;
+    border-top: solid white 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    
+}
+.contact-container img{
+    width: 70px; /* Set the width of the images to 100% of the container */
+  height: auto; /* Automatically adjust the height to maintain aspect ratio */
+  object-fit: contain;
+  margin: 10px 10px;
+  background-color: #212529;
 }
 .insta{
-    background-color: black;
-    width: 150px;
-    height: 105px;
-}
-.linkedin{
-    background-color: black;
-    
+    border-radius: 25%;
 }
