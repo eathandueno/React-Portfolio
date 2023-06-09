@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './nav.css'
 import forrest from './images/forrest.png';
 import city from './images/city-nobg.png';
-import neighborhood from './images/neighborhood-cropped.tiff';
+import neighborhood from './images/neighborhood.png';
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState('Home');
 
@@ -24,20 +24,20 @@ const Navbar = () => {
             
             <a className="nav-link" href="#Nature" onClick={() => handleLinkClick('Nature')}>
               Nature
-              {activeLink === 'Nature' && <img className='active nature' src={forrest} alt="nature active" />}
               </a>
+              {activeLink === 'Nature' && <img className='active nature' src={forrest} alt="nature active" />}
           </li>
           <li className={`nav-item ${activeLink === 'RealEstate' ? 'active' : ''}`}>
             
             <a className="nav-link" href="#RealEstate" onClick={() => handleLinkClick('RealEstate')}>Real Estate
-            {activeLink === 'RealEstate' && <img className='active realestate' src={neighborhood} alt="neighborhood active" />}
             </a>
+            {activeLink === 'RealEstate' && <img className='active realestate' src={neighborhood} alt="neighborhood active" />}
           </li>
           <li className={`nav-item ${activeLink === 'Urban' ? 'active' : ''}`}>
           
             <a className="nav-link" href="#Urban" onClick={() => handleLinkClick('Urban')}>Urban
-            {activeLink === 'Urban' && <img className='active urban' src={city} alt="urban active" />}
             </a>
+            {activeLink === 'Urban' && <img className='active urban' src={city} alt="urban active" />}
           </li>
           <li className={`nav-item ${activeLink === 'Equipment' ? 'active' : ''}`}>
             <a className="nav-link" href="#Equipment" onClick={() => handleLinkClick('Equipment')}>Equipment</a>

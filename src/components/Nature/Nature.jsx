@@ -1,8 +1,8 @@
 import React from 'react'
-
+import './nature.css'
 const Nature = () => {
   return (
-    <div>Nature</div>
+    <div className='nature-container'>Nature</div>
   )
 }
 

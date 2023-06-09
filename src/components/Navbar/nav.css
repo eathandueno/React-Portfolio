@@ -1,39 +1,70 @@
 .navbar{
     display: flex;
     flex-direction: column;
-    
+    height: max-content;
 }
 .navbar-nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+    margin-bottom: 10px;
 }
-.nature .realestate .urban{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: auto;
-  max-width: 25%;
+.navbar-brand{
+    margin-bottom: 10px;
+}
+.nature, .realestate ,.urban{
+  width: 200px;
+  display: flex;
+  justify-self: center;
   height: auto;
-  max-height: 25%;
-  z-index: -1;
+  align-items: center;
+  background-image: radial-gradient(ellipse at center, rgba(255, 255, 0, 0.137), rgba(255, 255, 255, 0.836));
+  border-radius: 50%;
+  background-clip: content-box;
+  position: absolute;
+  z-index: 0;
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
 }
-.nav-link{
-    z-index: 1;
-}
+
 .nav-item{
     display: flex;
-}
-.active{
-    height: auto;
-}
-a {
-    display: flex;
+    text-align: center;
     justify-content: center;
+    align-items: center;
 }
-a img{
-    width: min-content;
-  height: auto;
+
+.nav-link {
+    padding: 10px;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 0.4em rgba(0, 0, 0, 0.646);
+    z-index: 1;
 }
+.nav-left a {
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    color: white;
+    margin-left: 1%;
+}
+.nav-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background-color: transparent;
+    color: white;
+    backdrop-filter: blur(1px);
+
+}
+.nav-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Transparent background */
+    opacity: 1; /* Fully visible initially */
+    transition: opacity 0.3s ease; /* Transition effect for opacity */
+  }
+  
+  .nav-left.hidden {
+    opacity: 0; /* Fade out when hidden */
+  }

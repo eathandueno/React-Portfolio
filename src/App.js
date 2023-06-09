@@ -7,7 +7,7 @@ import RealEstate from './components/RealEstate/RealEstate';
 import Urban from './components/Urban/Urban';
 import Equipment from './components/Equipment/Equipment';
 import Footer from './components/Footer/Footer';
-
+import Nav from './components/Navbar/Nav2.0';
 const App = () => {
   const sectionRefs = {
     Home: useRef(null),
@@ -27,7 +27,8 @@ const App = () => {
   return (
     <div className="App">
       <div className="wrapper">
-        <Navbar handleClick={handleClick} />
+        
+        <Nav handleClick={handleClick} />
         <Home ref={sectionRefs.Home} />
         <FadeInOnScroll ref={sectionRefs.Nature} children={<Nature />} />
         <FadeInOnScroll ref={sectionRefs.RealEstate} children={<RealEstate />} />

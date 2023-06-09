@@ -9,19 +9,31 @@
     justify-content: center;
     align-items: center;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     text-shadow: 1px 1px 2px black, 0 0 0.4em rgba(0, 0, 0, 0.646);
 }
-.home-container{
+.home-container {
+  height: 120vh;
+  background-color: black;
+  padding: 30px;
+}
+.home{
     display: flex;
     width: 100%;
+    margin-bottom: 25%;
+    align-items: center;
     flex-direction: row;
     justify-content: space-between;
     padding: 5%;
     background-color: #ACAD94;
-    height: 100vh;
+    height: 100%;
     background-image: url('./nature-dom-1.jpeg');
-    background-size: cover;
-    background-position: center;
+    background-position: 0px  10px center;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: 100% auto;
 }
     .timeline{
     right: 10px;
@@ -29,9 +41,23 @@
     writing-mode: vertical-rl; /* Set the writing mode to vertical right-to-left */
   text-orientation: upright;
 }
-.about-text{
+.about-text, section h4{
     font-family: 'Merriweather';
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+  /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 2.5s steps(40, end),
+    blink-caret .75s step-end 1;
 }
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
 #scroll-progress {
     position: fixed;
     top: 50%;
