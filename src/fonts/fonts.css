@@ -2,3 +2,7 @@
     font-family:'Merriweather' ; 
     src: url('./fonts/Merriweather/Merriweather-Light.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
+}

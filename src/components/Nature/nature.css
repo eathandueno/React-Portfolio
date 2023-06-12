@@ -4,4 +4,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    justify-content: center;
+    padding: 5%;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+.nature-container:first-child{
+    font-family: 'Merriweather';
 }

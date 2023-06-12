@@ -22,11 +22,11 @@ const Nav = ( {handleClick}) => {
   }, [prevScrollPos]);
   return (
     <div className={`nav-left ${visible ? '' : 'hidden'}`}>
-        <a href='#Home' onClick={() => handleClick('Home')}><h1>Dominic Dueno</h1></a>
-        <a href='#Nature' onClick={() => handleClick('Nature')}>Nature</a>
-        <a href='#RealEstate' onClick={() => handleClick('RealEstate')}>Real Estate</a>
-        <a href='#Urban' onClick={() => handleClick('Urban')}>Urban</a>
-        <a href='#Equipment' onClick={() => handleClick('Equipment')}>Equipment</a>
+        <a href='#Home' onClick={() => handleClick('Home')}><h4><b>Home</b></h4></a>
+        <a href='#Nature' onClick={() => handleClick('Nature')}>nature</a>
+        <a href='#RealEstate' onClick={() => handleClick('RealEstate')}>real estate</a>
+        <a href='#Urban' onClick={() => handleClick('Urban')}>urban</a>
+        <a href='#Equipment' onClick={() => handleClick('Equipment')}>equipment</a>
     </div>
   )
 }
