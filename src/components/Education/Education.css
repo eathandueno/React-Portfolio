@@ -2,12 +2,14 @@
   background-color: black;
   padding: 200px 0;
 }
+
 .education-container {
   margin: auto;
   padding: 20px;
   background-color: black;
   backdrop-filter: blur(10px);
 }
+
 .education-container h1 {
   color: #fff;
   text-align: center;
@@ -19,6 +21,17 @@
   grid-template-columns: repeat(4, minmax(150px, 1fr));
   gap: 20px;
   padding: 20px 50px;
+}
+
+/* Change the grid layout for smaller screens */
+@media (max-width: 768px) {
+  .course-grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Change to 2 columns on small screens */
+    padding: 20px;
+  }
 }
 
 .course-card {
@@ -47,6 +60,7 @@
 .course-description {
   text-align: justify; /* Optional: improves the readability of longer descriptions */
 }
+
 .edu-logo {
   width: 80px;
   height: 80px;
