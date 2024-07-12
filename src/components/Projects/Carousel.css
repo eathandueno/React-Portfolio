@@ -1,0 +1,123 @@
+.project-container {
+  background-image: url("./images/DSC_0244.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  justify-content: center;
+  padding: 5%;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+.tech-icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 0 auto;
+}
+.project-container:first-child {
+  font-family: "Merriweather";
+  color: #ede3e4;
+}
+.project-container h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+.little {
+  font-size: 1.5em;
+  padding: 0 10px;
+  font-family: "Cedarville Cursive", cursive;
+}
+.carousel-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+
+.card.visible {
+  display: block; /* Display only visible cards */
+}
+
+.card.active {
+  opacity: 1;
+  transform: scale(1);
+  width: 300px; /* Larger size for the active card */
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ccc;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+button:hover {
+  background-color: #bbb;
+}
+
+button:first-of-type {
+  left: 10px;
+}
+
+button:last-of-type {
+  right: 10px;
+}
+.card {
+  width: 550px;
+  min-width: 550px; /* Minimum width of the card */
+  max-width: 550px; /* Maximum width of the card */
+  min-height: 450px; /* Minimum height of the card */
+  max-height: 450px; /* Maximum height of the card */
+  margin: 0 15px;
+  opacity: 0.6;
+  transform: scale(0.8);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: auto; /* Add a scrollbar if the content is larger than the card */
+}
+
+.card.active {
+  opacity: 1;
+  transform: scale(1);
+  width: 500px; /* Larger size for the active card */
+}
+
+img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: #0056b3;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}

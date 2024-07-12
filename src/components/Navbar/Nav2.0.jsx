@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react'
-import './nav.css';
-import 'bootstrap/dist/css/bootstrap.css';
-const Nav = ( {handleClick}) => {
+import React, { useEffect, useState } from "react";
+import "./nav.css";
+import "bootstrap/dist/css/bootstrap.css";
+const Nav = ({ handleClick }) => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 
@@ -14,21 +14,27 @@ const Nav = ( {handleClick}) => {
       setVisible(isVisible);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos]);
   return (
-    <div className={`nav-left ${visible ? '' : 'hidden'}`}>
-        <a href='#Home' onClick={() => handleClick('Home')}><h4><b>Home</b></h4></a>
-        <a href='#Nature' onClick={() => handleClick('Nature')}>nature</a>
-        <a href='#RealEstate' onClick={() => handleClick('RealEstate')}>real estate</a>
-        <a href='#Urban' onClick={() => handleClick('Urban')}>urban</a>
-        <a href='#Equipment' onClick={() => handleClick('Equipment')}>equipment</a>
+    <div className={`nav-left ${visible ? "" : "hidden"}`}>
+      <a href="#Home" onClick={() => handleClick("Home")}>
+        <h4>
+          <b>Home</b>
+        </h4>
+      </a>
+      <a href="#Projects" onClick={() => handleClick("Projects")}>
+        projects
+      </a>
+      <a href="#Education" onClick={() => handleClick("Education")}>
+        education
+      </a>
     </div>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;

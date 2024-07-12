@@ -1,0 +1,56 @@
+.education {
+  background-color: black;
+  padding: 200px 0;
+}
+.education-container {
+  margin: auto;
+  padding: 20px;
+  background-color: black;
+  backdrop-filter: blur(10px);
+}
+.education-container h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px 50px;
+}
+
+.course-card {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-card h3,
+.course-card p {
+  margin: 0 0 10px 0;
+  font-family: "Merriweather";
+}
+
+.course-card span,
+.course-card p.course-description {
+  color: #666;
+  font-size: 14px;
+  display: block;
+  margin-top: 12px;
+}
+
+.course-description {
+  text-align: justify; /* Optional: improves the readability of longer descriptions */
+}
+.edu-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}

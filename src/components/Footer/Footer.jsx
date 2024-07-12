@@ -1,23 +1,41 @@
-import React from 'react'
-import './footer.css';
-import linkedin from './images/linkedinLogo.png';
-import insta from './images/instagramlogo.jpg';
+import React from "react";
+import "./footer.css"; // Make sure to create a corresponding CSS file for styling
+import Linkedin from "./images/linkedinLogo.png"; // Import the logo image directly
+import Github from "./images/githubLogo.png"; // Import the logo image directly
 const Footer = () => {
   return (
-    <div className='footer'>
-        <h5>Contact me !</h5>
-        <div className='contact-container'>
-        <a target='_blank' rel="noreferrer" href='https://www.instagram.com/nothing_nowhere_media/'>
-            <img className='insta' src={insta} alt='Instagram Logo'/>
-        </a>
-        <a target='_blank' rel="noreferrer" href='https://www.linkedin.com/in/dominic-dueno-258306271/'>
-            <img className='Linkedin' src={linkedin} alt='Linkedin Logo'/>
-        </a>
-        
+    <footer className="footer">
+      <div className="footer-content">
+        <p>
+          Contact me at
+          <a href="mailto:elduenofn@gmail.com" className="email-link">
+            elduenofn@gmail.com
+          </a>
+        </p>
+        <ul className="social-links">
+          <li>
+            <a
+              href="https://linkedin.com/in/eathandueno"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img src={Linkedin} alt="LinkedIn" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/eathandueno"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img src={Github} alt="Github" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div className="copy-right">
+        <p>© 2024 Eathan Dueno. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+};
 
-        </div>
-    </div>
-  )
-}
-
-export default Footer
+export default Footer;

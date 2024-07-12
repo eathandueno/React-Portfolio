@@ -1,32 +1,45 @@
-.footer{
-    
-    bottom: 0px;
-    left: 0;
-    height: max-content;
-    width: 100%;
-    background-color: #212529;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    border-top: solid white 1px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    align-items: center;
+.footer {
+  bottom: 0px;
+  left: 0;
+  height: max-content;
+  width: 100%;
+  background-color: #131115;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border-top: solid white 1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-items: center;
 }
 
-
-.contact-container{
-    display: flex;
-    justify-content: center;
-    
+.contact-container {
+  display: flex;
+  justify-content: center;
 }
-.contact-container img{
-    width: 70px; /* Set the width of the images to 100% of the container */
+.footer ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+.footer img {
+  width: 70px; /* Set the width of the images to 100% of the container */
   height: auto; /* Automatically adjust the height to maintain aspect ratio */
   object-fit: contain;
   margin: 10px 10px;
   background-color: #212529;
 }
-.insta{
-    border-radius: 25%;
+.insta {
+  border-radius: 25%;
+}
+.email-link {
+  color: #3498db; /* Change the text color */
+  text-decoration: none; /* Remove the underline */
+  font-weight: bold; /* Make the text bold */
+  transition: color 0.3s ease; /* Add a transition for the color change */
+  padding: 10px;
+}
+
+.email-link:hover {
+  color: #2980b9; /* Change the text color when the link is hovered */
 }
