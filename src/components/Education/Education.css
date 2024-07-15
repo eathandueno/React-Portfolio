@@ -1,6 +1,6 @@
 .education {
   background-color: black;
-  padding: 200px 0;
+  padding: 50px 0; /* Reduced padding for all devices */
 }
 
 .education-container {
@@ -14,6 +14,7 @@
   color: #fff;
   text-align: center;
   margin-bottom: 20px;
+  font-size: 4vw; /* Responsive font size */
 }
 
 .course-grid {
@@ -23,14 +24,28 @@
   padding: 20px 50px;
 }
 
-/* Change the grid layout for smaller screens */
+/* Media Queries for smaller screens */
 @media (max-width: 768px) {
+  .education {
+    padding: 20px 10px; /* Smaller padding on mobile */
+  }
+
+  .education-container {
+    padding: 10px; /* Smaller container padding on mobile */
+  }
+
   .course-grid {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* Change to 2 columns on small screens */
-    padding: 20px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    padding: 10px; /* Reduced padding */
+  }
+
+  .education-container h1 {
+    font-size: 5.5vw; /* Slightly larger font size for better readability */
+  }
+}
+@media (max-width: 480px) {
+  .course-grid {
+    grid-template-columns: 1fr; /* 1 column on extra small screens */
   }
 }
 
@@ -38,7 +53,7 @@
   background: #f9f9f9;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 20px;
+  padding: 10px; /* Reduced padding */
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -52,18 +67,18 @@
 .course-card span,
 .course-card p.course-description {
   color: #666;
-  font-size: 14px;
+  font-size: 3.5vw; /* Responsive font size */
   display: block;
   margin-top: 12px;
 }
 
 .course-description {
-  text-align: justify; /* Optional: improves the readability of longer descriptions */
+  text-align: justify; /* Improves readability */
 }
 
 .edu-logo {
-  width: 80px;
-  height: 80px;
+  width: 60px; /* Smaller logo */
+  height: 60px; /* Smaller logo */
   border-radius: 50%;
   margin: 0 auto;
   display: block;
