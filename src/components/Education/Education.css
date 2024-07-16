@@ -67,7 +67,7 @@
 .course-card span,
 .course-card p.course-description {
   color: #666;
-  font-size: 3.5vw; /* Responsive font size */
+  font-size: 1vw; /* Responsive font size */
   display: block;
   margin-top: 12px;
 }
