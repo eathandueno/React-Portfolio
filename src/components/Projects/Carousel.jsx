@@ -11,6 +11,8 @@ import openaiIcon from "./images/openai.svg";
 import AlphaSEO from "./images/alphaSEO.mp4";
 import djangoIcon from "./images/django.svg";
 import arbitrageTrade from "./images/arbitrageTrade.png";
+import pyTorch from "./images/pytorch.png";
+import torchShowcase from "./images/torchShowcase.png";
 const projects = [
   // {
   //   title: "NASM Certified Personal Trainer  \n (in-progress)",
@@ -29,8 +31,22 @@ const projects = [
       { label: "Langchain", icon: langchainIcon },
       { label: "Python", icon: pythonIcon },
     ],
+    link:"https://alphaseo.webmarkets.ai/" ,  
     image: AlphaSEO,
     type: "Professional",
+  },
+  {
+    title: "PyTorch Medical Question Answering",
+    description:
+      "A repo containing a PyTorch implementation of a Medical Question Answering system. The model is trained on the MedQuad-MedicalQnADataset dataset and fine-tuned on a created dataset.",
+    tech: [
+      { label: "PyTorch", icon: pyTorch },
+      { label: "Python", icon: pythonIcon },
+    
+    ],
+    link:"https://github.com/eathandueno/torch",
+    image: torchShowcase,
+    type: "Personal",
   },
   {
     title: "AI-Graded Debate Game",
@@ -90,6 +106,7 @@ const projects = [
         icon: djangoIcon,
       },
     ],
+   
     type: "Personal",
     image: arbitrageTrade,
   },
@@ -97,6 +114,16 @@ const projects = [
 
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [enlargedImage, setEnlargedImage] = useState(null);
+
+  const handleImageClick = (image) => {
+    setEnlargedImage(image);
+  };
+
+  const handleCloseEnlargedImage = () => {
+    setEnlargedImage(null);
+  };
+
   const [flipped, setFlipped] = useState(
     new Array(projects.length).fill(false)
   );
@@ -154,6 +181,14 @@ const Carousel = () => {
                     </div>
                   ))}
                 </div>
+                 {projects[index].link && (
+                  <a
+                    href={projects[index].link}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Learn More
+                  </a>
+                )}
                 <p>{projects[index].type}</p>
                 <svg
                   onClick={() => toggleFlip(index)}
@@ -186,7 +221,7 @@ const Carousel = () => {
                     <source src={projects[index].image} type="video/mp4" />
                   </video>
                 ) : (
-                  <img
+                 <img
                     src={projects[index].image}
                     alt={projects[index].title}
                     style={{
@@ -195,6 +230,7 @@ const Carousel = () => {
                       maxHeight: "300px",
                       objectFit: "contain",
                     }}
+                    onClick={() => handleImageClick(projects[index].image)}
                   />
                 )}
                 <h3>{projects[index].title}</h3>
@@ -213,20 +249,20 @@ const Carousel = () => {
                     fill-rule="nonzero"
                   />
                 </svg>
-                {projects[index].link && (
-                  <a
-                    href={projects[index].link}
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Learn More
-                  </a>
-                )}
+               
               </>
             )}
           </div>
         ))}
       </div>
       <button onClick={goRight}>{">"}</button>
+      {enlargedImage && (
+        <div className="enlarged-image-container" onClick={handleCloseEnlargedImage}>
+          <div className="enlarged-image-wrapper">
+            <img src={enlargedImage} alt="Enlarged" className="enlarged-image" />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
