@@ -25,28 +25,31 @@ const courses = [
     institution: "College Of Western Idaho",
     year: "2023",
     description:
-      "Covers all fundamental aspects of React.js including JSX, components, states, and props.",
+      "An in-depth approach to creating and debugging object-oriented applications. Topics include classes, inheritance, exception handling, events, and file access.",
   },
   {
     logo: cwiLogo,
     title: "SWDV 115 - Introduction to Web Application Development",
     institution: "College Of Western Idaho",
     year: "2023",
-    description: "",
+    description:
+      "Essential structures of HTML and CSS, including coding conventions and best practices. Includes an exploration of relationships between HTML and other tagged-text languages.",
   },
   {
     logo: cwiLogo,
     title: "SWDV 140 - Intermediate Web Application Development",
     institution: "College Of Western Idaho",
     year: "2023",
-    description: "",
+    description:
+      "Creating, editing, importing, and exporting CSS based websites using WYSIWYG authoring tools. Designing and implementing websites using images, animations, and client-side scripts",
   },
   {
     logo: cwiLogo,
     title: "SWDV 143 - Client Side Frameworks",
     institution: "College Of Western Idaho",
     year: "2023",
-    description: "",
+    description:
+      "Comprehensive overview and application of client-side scripting technologies and frameworks. Emphasis is placed on adapting and extending traditional markup and client-side scripting languages, creating user interfaces, and connecting software components.",
   },
   {
     logo: cwiLogo,
